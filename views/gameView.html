@@ -1,0 +1,42 @@
+<section class="container">
+        <div class="addreview">
+          <input type="text" ng-model="game.gameReviews.user" placeholder="username">
+          <input type="text" ng-model="game.gameReviews.rating" placeholder="rating">
+          <textarea name="name" placeholder="Review" ng-model="game.gameReviews.review" rows="8" cols="40"></textarea>
+          <button ng-click="reviewGame(game)" class="btn btn-primary">Submit</button>
+        </div>
+
+    </div>
+
+    <div class="col-md-12 itemHolder">
+      <div class="col-md-3 piccontainer">
+        <img ng-src="{{game.gameImg}}" alt="">
+      </div>
+      <div class="col-md-9 itemStuff">
+
+          <h2 class="gameTitles">{{game.gameTitle}}</h2>
+          <div class="col-md-6 gameatts">{{game.gamePrice | currency}}</div>
+          <div class="col-md-6 gameatts">{{game.gameRating}}/5</div>
+          <p>{{game.gameDescript}}</p>
+          <div class="col-md-12 buyGame">
+            <a ng-click="removeCartItem(game)">
+              <span class="glyphicon glyphicon-remove"></span>
+            </a>
+          </div>
+      </div>
+    </div>
+  <h1 style="color: black">Reviews</h1>
+    <div ng-repeat="reviews in game.gameReviews">
+
+      <p>{{reviews.user}}</p>
+      <br>
+      <p>{{reviews.rating}}</p>
+      <br>
+      <p>{{reviews.review}}</p>
+    </div>
+
+
+
+
+
+</section>

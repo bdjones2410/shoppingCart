@@ -1,0 +1,48 @@
+<header class="col-md-12">
+  <h1>Board Games</h1>
+
+  <div class="col-md-12 checkout">
+    <div class="col-md-4 headcent">
+      <a href="#/" class="shop">
+           <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+           <span class="shoppingcart">Shop</span>
+       </a>
+    </div>
+    <div class="col-md-4 headcent">
+      <h3>4 U</h3>
+    </div>
+    <div class="col-md-4 headcent">
+       <a href="#/cart" class="cart">
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            <span class="shoppingcart">checkout</span>
+        </a>
+    </div>
+  </div>
+</header>
+
+<section class="container">
+<div ng-repeat="game in games" class="col-md-12 itemHolder">
+  <div class="col-md-3 piccontainer">
+    <img ng-src="{{game.gameImg}}" alt="">
+  </div>
+  <div class="col-md-9 itemStuff">
+
+      <h2 class="gameTitles">{{game.gameTitle}}</h2>
+      <div class="col-md-6 gameatts">{{game.gamePrice | currency}}</div>
+      <div class="col-md-6 gameatts">{{game.gameRating}}/5</div>
+      <p>{{game.gameDescript}}</p>
+      <div class="col-md-12 buyGame">
+        <a ng-click="removeCartItem(game)">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a>
+      </div>
+  </div>
+</div>
+<div class="totals">Total: {{cartTotal | currency}}</div>
+</section>
+
+
+<footer>
+  <a href="#checkout">Checkout</a>
+  <span>&copy 2015</span>
+</footer>

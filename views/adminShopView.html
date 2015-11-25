@@ -1,0 +1,53 @@
+<header>
+  <h2>Welcome Admin</h2>
+</header>
+<section class="container">
+  <div class="col-md-6 newGames">
+
+      <input type="text" ng-model="newGame.gameImg" placeholder="game image url"class="gameIMG">
+      <input type="text" ng-model="newGame.gameTitle" placeholder="game title"class="gameTitle">
+      <input type="text" ng-model="newGame.gamePrice" placeholder="game price"class="gamePrice">
+      <input type="text" ng-model="newGame.gameRating" placeholder="game rating"class="gameRating">
+      <textarea name="name" rows="8" cols="40" ng-model="newGame.gameDescript" placeholder="game description"class="gameDescript"></textarea>
+      <button ng-click="addGame(newGame)" class="btn btn-primary subbutton">new Game</button>
+
+  </div>
+  <div class="col-md-6 itemHolder">
+    <div class="col-md-3 piccontainer">
+      <img ng-src="{{newGame.gameImg}}" alt="">
+    </div>
+    <div class="col-md-9 itemStuff">
+
+        <h2 class="gameTitles">{{newGame.gameTitle}}</h2>
+        <div class="col-md-6 gameatts">{{newGame.gamePrice | currency}}</div>
+        <div class="col-md-6 gameatts">{{newGame.gameRating}}/10</div>
+        <p>{{newGame.gameDescript}}</p>
+    </div>
+  </div>
+
+<div ng-repeat="game in games" class="col-md-12 itemHolder">
+  <div class="col-md-3 piccontainer">
+    <img ng-src="{{game.gameImg}}" alt="">
+  </div>
+  <div class="col-md-9 itemStuff">
+
+      <h2 class="gameTitles">{{game.gameTitle}}</h2>
+      <div class="col-md-6 gameatts">{{game.gamePrice | currency}}</div>
+      <div class="col-md-6 gameatts">{{game.gameRating}}/5</div>
+      <p>{{game.gameDescript}}</p>
+      <div class="col-md-12 buyGame">
+        <a ng-click="deleteGame(game)">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a>
+        <a ng-click="editGame(game)">
+          <span class="glyphicon glyphicon-wrench"></span>
+        </a>
+
+      </div>
+  </div>
+</div>
+
+</section>
+<footer>
+  <span>&copy 2015</span>
+</footer>

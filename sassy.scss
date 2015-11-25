@@ -1,0 +1,187 @@
+/*****************************************
+              VARIABLES
+*****************************************/
+
+$pumpkin:#d35400;
+$clouds:#ecf0f1;
+$hoverblue:#3498db;
+
+
+/*****************************************
+              OVERALL
+*****************************************/
+body{
+  background-color:$clouds;
+  color:$clouds;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.fourohfour{
+  text-align: center;
+  color:black;
+}
+
+/*****************************************
+              HEADER
+*****************************************/
+header{
+  background-color:$pumpkin;
+  text-align: center;
+  color:white;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 5px;
+  padding:5px 0;
+  h1{
+    display:block;
+    font-size:4em;
+  }
+  h3{
+    display:inline-block;
+    font-size:2em;
+  }
+}
+
+.checkout{
+  margin:0 auto;
+  text-align: center;
+  .headcent{
+    text-align: center;
+    .shop{
+      display: inline-block;
+      text-align: center;
+      color: #ecf0f1;
+      text-decoration: none;
+      float: left;
+      &:hover{
+        color:$hoverblue;
+      }
+    }
+    .cart{
+      display: inline-block;
+      text-align: center;
+      color: $clouds;
+      text-decoration: none;
+      float:right;
+      &:hover{
+        color:$hoverblue;
+      }
+    }
+  }
+}
+.glyphicon-tag{
+  font-size: 2em;
+  width: 100%;
+}
+.glyphicon-shopping-cart{
+  font-size: 2em;
+  width:100%;
+
+}
+
+
+
+/*****************************************
+              SECTION
+*****************************************/
+
+section{
+  min-height: 300px;
+  clear:both;
+}
+
+
+/*****************************************
+              FOOTER
+*****************************************/
+
+footer{
+  text-align: center;
+  background-color:$pumpkin;
+  margin:5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  min-height:50px;
+  clear:both;
+}
+
+
+/*****************************************
+              SHOPVIEW
+*****************************************/
+
+.itemHolder{
+  background-color:blue;
+  margin-top:5px;
+  margin-bottom:5px;
+  padding-left: 0;
+  position: relative;
+}
+.piccontainer{
+  padding: 10px;
+  background-color: red;
+  img{
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+.gameTitles{
+  text-align: center;
+}
+.itemStuff{
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.gameatts{
+  text-align: center;
+}
+.buyGame{
+  position: absolute;
+  bottom:0;
+}
+.glyphicon-plus{
+  float:right;
+  margin:10px;
+}
+
+
+
+/*****************************************
+              ADMIN SHOP
+*****************************************/
+
+
+/*****************************************
+              CARTVIEW
+*****************************************/
+.glyphicon-remove{
+  float:right;
+  margin:10px;
+}
+.glyphicon-wrench{
+  float:right;
+  margin:10px;
+}
+.totals{
+  color:black;
+}
+
+
+/*****************************************
+              DETAILS VIEW
+*****************************************/
+
+
+
+/*****************************************
+              RECEIPT VIEW
+*****************************************/
